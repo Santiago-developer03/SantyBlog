@@ -36,7 +36,7 @@
               </label>
             </div>
             <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl" href="./">Noticias Puerto Plata</a>
+              <a class="btn btn-ghost normal-case text-xl" href="./">{{ config('app.name') }}</a>
             </div>
             <div class="flex-none">
               <button
@@ -123,7 +123,7 @@
         <label for="my-drawer-2" class="drawer-overlay"></label>
         <div class="overflow-y-auto flex">
           <!-- Sidebar content here -->
-          <div class="w-fit p-3 lg:m-6 bg-base-100">
+          <div class="w-fit p-2 lg:m-6 bg-base-100">
             <!-- avatar start -->
             <div class="avatar w-60">
               <div class="w-16 lg:w-32 rounded-full mx-auto">
@@ -249,9 +249,9 @@
                     </svg>
                     Search
                   </a>
-                </li> 
+                </li> --}}
                 <li>
-                  <a href="#">
+                  <a href="{{ route('categories.index') }}">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       class="h-5 w-5"
@@ -268,7 +268,7 @@
                     </svg>
                     Categorías
                   </a>
-                </li> --}}
+                </li>
                 @if(Auth::user()->role == "Administrador")
                   <li>
                     <a href="{{ route('profile.index') }}">
@@ -294,9 +294,10 @@
                 <li>
                   <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                        <svg fill="#999999" height="20px" width="20px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-11.55 -11.55 408.07 408.07" xml:space="preserve" stroke="#999999" stroke-width="9.624275">
-                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.539884"> <g> <g id="Sign_Out"> <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03 C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03 C192.485,366.299,187.095,360.91,180.455,360.91z"></path> <path d="M381.481,184.088l-83.009-84.2c-4.704-4.752-12.319-4.74-17.011,0c-4.704,4.74-4.704,12.439,0,17.179l62.558,63.46H96.279 c-6.641,0-12.03,5.438-12.03,12.151c0,6.713,5.39,12.151,12.03,12.151h247.74l-62.558,63.46c-4.704,4.752-4.704,12.439,0,17.179 c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z"></path> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </g> </g><g id="SVGRepo_iconCarrier"> <g> <g id="Sign_Out"> <path d="M180.455,360.91H24.061V24.061h156.394c6.641,0,12.03-5.39,12.03-12.03s-5.39-12.03-12.03-12.03H12.03 C5.39,0.001,0,5.39,0,12.031V372.94c0,6.641,5.39,12.03,12.03,12.03h168.424c6.641,0,12.03-5.39,12.03-12.03 C192.485,366.299,187.095,360.91,180.455,360.91z"></path> <path d="M381.481,184.088l-83.009-84.2c-4.704-4.752-12.319-4.74-17.011,0c-4.704,4.74-4.704,12.439,0,17.179l62.558,63.46H96.279 c-6.641,0-12.03,5.438-12.03,12.151c0,6.713,5.39,12.151,12.03,12.151h247.74l-62.558,63.46c-4.704,4.752-4.704,12.439,0,17.179 c4.704,4.752,12.319,4.752,17.011,0l82.997-84.2C386.113,196.588,386.161,188.756,381.481,184.088z"></path> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </g> </g>
-                        </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right h-5 w-5" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                      <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                    </svg>
                     <button type="submit">Cerrar Sesión</button>
                 </form>
                 </li>
@@ -343,7 +344,7 @@
                         />
                       </svg>
                     </button>
-                    <button
+                    {{-- <button
                       data-set-theme="garden"
                       class="btn btn-sm btn-ghost btn-square"
                       data-act-class="btn-active"
@@ -362,7 +363,7 @@
                           d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                         />
                       </svg>
-                    </button>
+                    </button> --}}
                     <button
                       data-set-theme="dark"
                       class="btn btn-sm btn-ghost btn-square"

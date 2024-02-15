@@ -101,7 +101,7 @@
       </div> --}}
     </div>
     <div class="divider"></div>
-    <p class="text-sm pl-4">Copyright © {{ date('Y') }} Noticias Puerto Plata</p>
+    <p class="text-sm pl-4">Copyright © {{ date('Y') }} {{ config('app.name') }}</p>
   </div>
 </div>
 @endsection

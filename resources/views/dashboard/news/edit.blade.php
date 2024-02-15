@@ -4,7 +4,7 @@
     <div class="space-y-2 md:space-y-6">
         <div class="card shadow-xl flex items-center justify-center">
             <div class="w-full p-6 rounded-lg shadow-lg">
-              <h1 class="text-2xl font-semibold text-center text-gray-300 mt-8 mb-6">Agregar Noticia:</h1>
+              <h1 class="text-2xl font-semibold text-center text-gray-300 mt-8 mb-6">Actualizar Noticia:</h1>
               <form action="{{ route('news.update', $post) }}" method="POST" enctype="multipart/form-data">
                 @csrf   @method('PUT')
                 <div class="mb-4">
@@ -57,7 +57,7 @@
           </div>
     </div>
     <div class="divider"></div>
-    <p class="text-sm pl-4">Copyright © {{ date('Y') }} Noticias Puerto Plata</p>
+    <p class="text-sm pl-4">Copyright © {{ date('Y') }} {{ config('app.name') }}</p>
   </div>
 </div>
 @endsection

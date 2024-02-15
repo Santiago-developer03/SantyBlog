@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
@@ -44,6 +45,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 
 
 Route::resource('/news', PostController::class)->middleware('auth');
+Route::resource('/categories', CategoryController::class)->middleware('auth');
 
 Route::middleware('can:accessAdmin')->group(function () {
     Route::get('/users', [ProfileController::class, 'index'])->name('profile.index');

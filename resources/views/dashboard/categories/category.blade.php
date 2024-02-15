@@ -2,7 +2,7 @@
 @section('content')
 <div class="flex-1 p-3 md:py-[35]">
     <div class="space-y-2 md:space-y-6">
-        
+
         @if($message = Session::get('danger'))
           <div class="relative block w-full rounded-lg bg-red-400 p-4 text-lg leading-5 text-white font-bold opacity-100" x-show="open" data-dismissible="alert">
             <div class="mr-12">{{ $message }}</div>
@@ -32,28 +32,18 @@
         <div class="card shadow-xl">
             <div class="card-body">
               <div class="flex justify-end">
-                <a href="{{ route('profile.create') }}">
-                  <button class="w-36 bg-gradient-to-r bg-green-500 hover:bg-green-600 to-cyan-600 text-white text-sm font-bold text-center uppercase py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mb-2">
-                    Crear Usuario
+                <a href="{{ route('categories.create') }}">
+                  <button class="w-44 bg-gradient-to-r bg-green-500 hover:bg-green-600 to-cyan-600 text-white text-sm font-bold text-center uppercase py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 mb-2">
+                    Crear Categoría
                     <i class="fa fa-plus" aria-hidden="true"></i>
                   </button>
                 </a>
-            </div>
-              
+              </div>
                 <table class="text-sm text-center text-gray-300">
                     <thead class="text-md text-gray-300 uppercase bg-gray-700 mx-auto">
                         <tr>
                             <th scope="col" class="px-6 py-3">
-                                Foto
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Usuario
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Correo Electrónico
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Rol
+                                Categorías
                             </th>
                             <th scope="col" class="px-6 py-3">
                                 Acciones
@@ -61,40 +51,32 @@
                         </tr>
                     </thead>
                     <tbody class="text-md text-gray-300 border-b border-gray-500">
-                        @foreach($users as $user)
-                            <tr>
-                                <td class="px-6 py-4">
-                                    <img src="{{ asset('storage/profiles/' . $user->avatar) }}"
-                                    class="w-32 rounded-lg mx-auto">
-                                </td>
-                                <td class="px-6 py-4">
-                                    {{ $user->name }}
-                                </td>
-                                <td class="px-6 py-4">
-                                    {{ $user->email }}
-                                </td>
-                                <td class="px-6 py-4">
-                                    {{ $user->role }}
-                                </td>
-                                <td class="px-6 py-4">
-                                <form action="{{ route('profile.destroy', $user) }}" method="POST">
-                                    @csrf   @method('DELETE')
-                                    <div class="flex justify-center gap-2 ">
-                                    <a href="{{ route('profile.edit', $user) }}" class="w-12 bg-gradient-to-r bg-yellow-500 hover:bg-yellow-600 to-cyan-600 text-white text-lg font-bold text-center py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
-                                        <i class="fa fa-pencil" aria-hidden="true"></i>
-                                    </a>
-                                    <button type="submit" class="w-12 bg-gradient-to-r bg-red-500 hover:bg-red-600 to-cyan-600 text-white text-lg font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                    </button>
-                                    </div>
-                                </form>
-                                </td>
-                            </tr>
-                        @endforeach
+                      {{-- @foreach ($categories as $category) --}}
+                        <tr>
+                            <td class="px-6 py-4">
+                                {{-- {{ $category->category }} --}}
+                                Nacional
+                            </td>
+                            <td class="px-6 py-4">
+                              <form action="#" method="POST">
+                                @csrf @method('DELETE')
+                                <div class="flex justify-center gap-2 ">
+                                  <a href="#" class="w-12 bg-gradient-to-r bg-yellow-500 hover:bg-yellow-600 to-cyan-600 text-white text-lg font-bold text-center py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                  </a>
+                                  <button type="submit" class="w-12 bg-gradient-to-r bg-red-500 hover:bg-red-600 to-cyan-600 text-white text-lg font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                                    <i class="fa fa-trash" aria-hidden="true"></i>
+                                  </button>
+                                </div>
+                              </form>
+                            </td>
+                        </tr>
+                      {{-- @endforeach --}}
                     </tbody>
                 </table>
             </div>
           </div>
+          {{-- {{ $posts->links(); }} --}}
       {{-- <div class="flex justify-center">
         <div class="btn-group">
           <button class="btn">1</button>

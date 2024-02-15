@@ -34,7 +34,7 @@
               </label>
             </div>
             <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl" href="./">Noticias Puerto Plata</a>
+              <a class="btn btn-ghost normal-case text-xl" href="./">SantyBlog</a>
             </div>
             <div class="flex-none">
               <button
@@ -123,13 +123,13 @@
             <!-- avatar start -->
             <div class="avatar w-60">
               <div class="w-16 lg:w-32 rounded-full mx-auto">
-                <img src="{{ asset('images/noticias-puerto-plata-logo.jpg') }}" />
+                <img src="{{ asset('images/blog-logo.jpg') }}" />
               </div>
             </div>
             <!-- avatar end -->
-            <h1 class="text-2xl p-2 pl-4">Noticias Puerto Plata</h1>
-              <p class="text-sm pl-4">Te informamos de los hechos más relevantes 
-                <br>ocurrido en la Rep. Dom. y el mundo.</p>
+            <h1 class="text-2xl p-2 pl-4">SantyBlog</h1>
+              <p class="text-sm pl-4">Lorem ipsum dolor sit amet consectetur 
+                <br> adipisicing elit. Et iste unde necessitatibus.</p>
             <div class="flex gap-1 justify-center pt-4">
               <a class="btn btn-sm btn-ghost btn-square">
                 <svg
@@ -328,7 +328,7 @@
                         />
                       </svg>
                     </button>
-                    <button
+                    {{-- <button
                       data-set-theme="garden"
                       class="btn btn-sm btn-ghost btn-square"
                       data-act-class="btn-active"
@@ -347,7 +347,7 @@
                           d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                         />
                       </svg>
-                    </button>
+                    </button> --}}
                     <button
                       data-set-theme="dark"
                       class="btn btn-sm btn-ghost btn-square"

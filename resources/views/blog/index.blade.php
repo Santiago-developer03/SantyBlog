@@ -6,11 +6,14 @@
           @foreach ($blogs as $blog)
             <div class="card card-side bg-base-200 shadow-xl">
               <figure>
-                <img
-                  src="{{ asset('storage/images/' . $blog->image) }}"
-                  alt="Movie"
-                  class="w-56"
-                />
+                <a href="{{ route('blog.show', $blog) }}"
+                  class="flex w-56 items-center">
+                  <img
+                    src="{{ asset('storage/images/' . $blog->image) }}"
+                    alt="{{ $blog->title }}"
+                    class="rounded-lg"
+                  />
+                </a>
               </figure>
               <div class="card-body">
                 <a href="{{ route('blog.show', $blog) }}" class="hover:text-white">
@@ -34,7 +37,7 @@
           {{ $blogs->links(); }}
         </div>
         <div class="divider"></div>
-        <p class="text-sm pl-4">Copyright © {{ date('Y') }} Noticias Puerto Plata</p>
+        <p class="text-sm pl-4">Copyright © {{ date('Y') }} {{ config('app.name') }}</p>
       </div>
     </div>
   </div>

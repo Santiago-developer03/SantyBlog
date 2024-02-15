@@ -2,7 +2,7 @@
 @section('content')
 <div class="flex-1 p-3 md:py-[35]">
     <div class="space-y-2 md:space-y-6">
-      <h1 class="text-2xl text-gray-300 text-center font-bold"><u>¡{{ Auth::user()->name }}, bienvenido/a a Noticias Puerto Plata!</u></h1>
+      <h1 class="text-2xl text-gray-300 text-center font-bold"><u>¡{{ Auth::user()->name }}, bienvenido/a a {{ config('app.name') }}!</u></h1>
         <div class="card shadow-xl">
             <div class="card-body">
                 <table class="text-sm text-center text-gray-300">
@@ -48,7 +48,7 @@
           {{ $posts->links(); }}
     </div>
     <div class="divider"></div>
-    <p class="text-sm pl-4">Copyright © {{ date('Y') }} Noticias Puerto Plata</p>
+    <p class="text-sm pl-4">Copyright © {{ date('Y') }} {{ config('app.name') }}</p>
   </div>
 </div>
 @endsection

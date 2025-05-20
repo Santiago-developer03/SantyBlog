@@ -285,8 +285,27 @@
                     Archive
                   </a>
                 </li> --}}
+                <li>
+                  <a href="{{ url('login') }}">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                      />
+                    </svg>
+                    Login
+                  </a>
+                </li>
                 <div class="divider"></div>
-                <li class="hidden lg:block">
+                <!-- <li class="hidden lg:block">
                   <div class="flex gap-1 justify-center">
                     <button
                       data-set-theme="winter"
@@ -365,7 +384,7 @@
                       </svg>
                     </button>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
             <!-- menu end -->

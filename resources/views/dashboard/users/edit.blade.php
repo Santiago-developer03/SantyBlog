@@ -43,14 +43,14 @@
                     <small class="text-red-500 font-bold">{{ $message }}</small>
                   @enderror
                   </select>
-                </div> 
+                </div>              
 
-                <div class="mb-4">
-                  <label for="password" class="block mb-2 text-md text-gray-300 font-bold">Contraseña:</label>
-                  <input type="password" id="password" name="password" class="text-gray-600 font-bold w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" autocomplete="off">
-                  @error('password')
-                    <small class="text-red-500 font-bold">{{ $message }}</small>
-                  @enderror
+                <div class="mb-4"> 
+                  <label for="password" class="block text-md text-gray-300 font-bold">Nueva Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Escriba nueva Contraseña" class="text-gray-600 font-bold w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" autocomplete="off">
+                      @error('password')
+                        <small class="text-red-500 font-bold">{{ $message }}</small>
+                      @enderror
                 </div>
 
                 <div class="flex justify-end gap-2 ">

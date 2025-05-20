@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -70,6 +71,7 @@ class ProfileController extends Controller
             'name' => 'required',
             'email' => 'required',  
             'role' => 'required',
+            'password' => 'nullable|min:4'
         ]);
 
         $user = User::find($id);
@@ -80,11 +82,15 @@ class ProfileController extends Controller
             $user->avatar = $fileImage;
         }  
 
-            $user->name = $request->name;
-            $user->email = $request->email;
-            $user->password = bcrypt($request->password);
-            $user->role = $request->role;
-            $user->update();
+        if (!empty($request->input('password'))) {
+            $user->password = Hash::make($request->password);
+        }
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->role = $request->role;
+        $user->update();
+        
 
         return redirect()->route('profile.index')->with('success', '¡Usuario actualizado exitosamente!');
 

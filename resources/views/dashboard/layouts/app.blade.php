@@ -116,8 +116,7 @@
 
           {{-- CONTENT --}}
           @yield('content')
-
-        
+          
         </div>
         <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
@@ -302,7 +301,7 @@
                 </form>
                 </li>
                 
-                <li class="hidden lg:block">
+                <!-- <li class="hidden lg:block">
                   <div class="flex gap-1 justify-center">
                     <button
                       data-set-theme="winter"
@@ -381,7 +380,7 @@
                       </svg>
                     </button>
                   </div>
-                </li>
+                </li> -->
               </ul>
             </div>
             <!-- menu end -->

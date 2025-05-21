@@ -121,13 +121,13 @@
           <!-- Sidebar content here -->
           <div class="w-fit p-3 lg:m-6 bg-base-100">
             <!-- avatar start -->
-            <div class="avatar w-60">
+            <div class="flex justify-center item-center ml-6 avatar w-60">
               <div class="w-16 lg:w-32 rounded-full mx-auto">
                 <img src="{{ asset('images/blog-logo.jpg') }}" />
               </div>
             </div>
             <!-- avatar end -->
-            <h1 class="text-2xl p-2 pl-4">SantyBlog</h1>
+            <h1 class="flex justify-center item-center text-2xl p-2 pl-4">SantyBlog</h1>
               <p class="text-sm pl-4">Lorem ipsum dolor sit amet consectetur 
                 <br> adipisicing elit. Et iste unde necessitatibus.</p>
             <div class="flex gap-1 justify-center pt-4">
@@ -283,6 +283,28 @@
                       />
                     </svg>
                     Archive
+                  </a>
+                </li> --}}
+                {{-- <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+                      />
+                    </svg>
+                      {{ $blog->category }}
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
                   </a>
                 </li> --}}
                 <li>

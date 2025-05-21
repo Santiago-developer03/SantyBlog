@@ -5,7 +5,7 @@
         <div class="card shadow-xl flex items-center justify-center">
             <div class="w-full p-6 rounded-lg shadow-lg">
               <h1 class="text-2xl font-semibold text-center text-gray-300 mt-8 mb-6">Agregar Categoría:</h1>
-              <form action="#" method="POST" enctype="multipart/form-data">
+              <form action="{{ route('categories.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="mb-4">

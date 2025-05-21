@@ -113,6 +113,6 @@ class PostController extends Controller
             Post::destroy($id);
         }
 
-        return redirect()->route('news.index')->with('danger', '¡Noticia creada exitosamente!');
+        return redirect()->route('news.index')->with('danger', '¡Noticia eliminada exitosamente!');
     }
 }

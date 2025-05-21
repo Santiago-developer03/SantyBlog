@@ -51,17 +51,16 @@
                         </tr>
                     </thead>
                     <tbody class="text-md text-gray-300 border-b border-gray-500">
-                      {{-- @foreach ($categories as $category) --}}
+                      @foreach ($categories as $category)
                         <tr>
                             <td class="px-6 py-4">
-                                {{-- {{ $category->category }} --}}
-                                Nacional
+                                {{ $category->category }}
                             </td>
                             <td class="px-6 py-4">
-                              <form action="#" method="POST">
+                              <form action="{{ route('categories.destroy', $category) }}" method="POST">
                                 @csrf @method('DELETE')
                                 <div class="flex justify-center gap-2 ">
-                                  <a href="#" class="w-12 bg-gradient-to-r bg-yellow-500 hover:bg-yellow-600 to-cyan-600 text-white text-lg font-bold text-center py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
+                                  <a href="{{ route('categories.edit', $category) }}" class="w-12 bg-gradient-to-r bg-yellow-500 hover:bg-yellow-600 to-cyan-600 text-white text-lg font-bold text-center py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                                     <i class="fa fa-pencil" aria-hidden="true"></i>
                                   </a>
                                   <button type="submit" class="w-12 bg-gradient-to-r bg-red-500 hover:bg-red-600 to-cyan-600 text-white text-lg font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
@@ -71,7 +70,7 @@
                               </form>
                             </td>
                         </tr>
-                      {{-- @endforeach --}}
+                      @endforeach
                     </tbody>
                 </table>
             </div>
